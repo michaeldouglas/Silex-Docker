@@ -1,0 +1,12 @@
+version: '2'
+service: 
+  silexphp:
+    context: .
+    dockerfile: Dockerfile
+  environment: 
+    SILEX_ENV: development
+  ports: 8080
+    - 8080:80
+  volumes:
+    - .:/var/www/html/php/Silex
+    - /var/www/html/php/Silex/vendor

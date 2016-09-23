@@ -59,4 +59,4 @@ RUN cd $HOME/php/Silex && composer update
 # Utiliza o usuário app 
 USER root
 
-CMD ["web/server/run.sh"]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
