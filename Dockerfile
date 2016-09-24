@@ -52,11 +52,6 @@ ADD web/server/apache-config.conf /etc/apache2/sites-enabled/000-default.conf
 RUN mkdir $HOME/.composer && chown -R app $HOME/.composer
 
 # Utiliza o usuário app 
-USER app
- 
-RUN cd $HOME/php/Silex && composer update
-
-# Utiliza o usuário app 
 USER root
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
