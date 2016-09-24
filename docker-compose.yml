@@ -10,6 +10,8 @@ services:
     links:
       - db
       - redis
+    volumes:
+      - ./:/var/www/html/php/Silex
   redis:
     image: redis
   db:
