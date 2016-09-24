@@ -17,6 +17,25 @@ RUN apt-get update \
 # Variavel do caminho da aplicação
 ENV HOME=/var/www/html
 
+# Phing.
+RUN pear channel-discover pear.phing.info
+RUN pear install phing/phing-2.6.1
+
+# PHP CodeSniffer
+RUN curl -LsS https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar -o /usr/local/bin/phpcs \
+    && chmod a+x /usr/local/bin/phpcs \
+    && phpcs --version
+
+# php-cs-fixer
+RUN curl http://get.sensiolabs.org/php-cs-fixer.phar -o php-cs-fixer \
+    && chmod a+x php-cs-fixer \
+    && mv php-cs-fixer /usr/local/bin/php-cs-fixer
+
+# phpunit
+RUN curl -LsS https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit \
+    && chmod a+x /usr/local/bin/phpunit \
+    && phpunit --version
+
 # Variaveis de ambiente do apache
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
@@ -42,8 +61,8 @@ RUN chown -R app $HOME/php/Silex
 # Retorna para o usuário root
 USER root
 
-# Habilita a porta 8080 do apache.
-EXPOSE 80
+# Habilita a porta 80 do apache.
+EXPOSE 22 80
 
 # Atualiza as configurações default do Apache
 ADD web/server/apache-config.conf /etc/apache2/sites-enabled/000-default.conf
