@@ -44,10 +44,16 @@ basta utilizar o comando sem a flag:
 
 ## Testando seu Silex App
 
-Abra um nova aba no seu terminal e então execute o comando:
+Abra uma nova aba no seu terminal e então execute o comando:
 
 ```
 curl localhost:8000
+```
+
+Para verificar utilizar o phpunit:
+
+```
+phpunit
 ```
 
 ![](http://gifsec.com/wp-content/uploads/GIF/2014/03/Thumbs-UP-kid-gifs.gif?gs=a)
