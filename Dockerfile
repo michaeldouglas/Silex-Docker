@@ -36,6 +36,11 @@ RUN curl -LsS https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit \
     && chmod a+x /usr/local/bin/phpunit \
     && phpunit --version
 
+#XDEBUG
+RUN pecl install xdebug-2.4.0RC3
+RUN echo "zend_extension=xdebug.so\nxdebug.cli_color=1\nxdebug.remote_autostart=1\nxdebug.remote_connect_back=1" > /usr/local/etc/php/conf.d/xdebug.ini
+
+
 # Variaveis de ambiente do apache
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data

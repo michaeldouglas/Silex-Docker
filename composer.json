@@ -1,5 +1,26 @@
 {
+    "name": "michael/silex-docker",
+    "description": "Estrutura contendo o Silex + Docker.",
+    "keywords": ["Silex", "Silex + Docker"],
+    "license": "MIT",
+    "type": "library",
     "require": {
+        "php": ">=7.0.0",
         "silex/silex": "~2.0"
-    }
+    },
+    "authors": [
+        {
+            "name": "Michael Douglas Barbosa Araujo",
+            "email": "michaeldouglas010790@gmail.com"
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "bash -s web/server/alias.sh"
+        ],
+        "post-update-cmd": [
+            "bash -s web/server/alias.sh"
+        ]
+    },
+    "minimum-stability": "dev"
 }
