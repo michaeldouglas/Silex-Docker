@@ -56,4 +56,4 @@ Para verificar utilizar o phpunit:
 phpunit
 ```
 
-![](http://gifsec.com/wp-content/uploads/GIF/2014/03/Thumbs-UP-kid-gifs.gif?gs=a)
+![](http://gifsec.com/wp-content/uploads/GIF/2015/06/Dance-With-Me-Cat.gif?gs=a)
