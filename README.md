@@ -4,24 +4,24 @@ Essa aplicação foi criada para ser utilizada no curso de Silex do PHP Conferen
 
 ## Compatibilidade
 
- PHP >= 7.0
+* PHP >= 7.0
 
 ## Dependências Docker
 
 `Não` se preocupe ao executar a máquina será instalada as dependências e irá gerar o link com a máquina do Silex
 
- Redis
- Mariadb
+* Redis
+* Mariadb
  
 ## Dependências PHP
 
 `Não` se preocupe ao executar a máquina será instalada as dependências do PHP
 
- PHP CodeSniffer
- Phing
- PHP CodeSniffer
- php-cs-fixer
- phpunit
+* PHP CodeSniffer
+* Phing
+* PHP CodeSniffer
+* php-cs-fixer
+* phpunit
  
 ## Environment MariaDB
 
