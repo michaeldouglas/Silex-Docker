@@ -58,3 +58,19 @@ phpunit
 ```
 
 ![](http://gifsec.com/wp-content/uploads/GIF/2015/06/Dance-With-Me-Cat.gif?gs=a)
+
+## Remover Containers
+
+Para remover todos os containers você pode executar em seu terminal o comando:
+
+```
+docker rm $(docker ps -a -q)
+```
+
+## Remover Imagens
+
+Para remover todos as imagens você pode executar em seu terminal o comando:
+
+```
+docker rmi $(docker images -q)
+```
