@@ -5,6 +5,7 @@ Essa aplicação foi criada para ser utilizada no curso de Silex do PHP Conferen
 ## Compatibilidade
 
 * PHP >= 7.0
+* Sistemas UNIX
 
 ## Dependências Docker
 
@@ -50,7 +51,7 @@ Abra uma nova aba no seu terminal e então execute o comando:
 curl localhost:8000
 ```
 
-Para verificar utilizar o phpunit:
+Para utilizar o phpunit execute o comando:
 
 ```
 phpunit

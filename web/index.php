@@ -9,7 +9,7 @@ $app->get('/hello/{name}', function($name) use($app) {
 });
 
 $app->get('/', function() use($app) {
-    return 'Silex php !!!';
+    return 'Silex php !';
 });
 
 $app->run();
