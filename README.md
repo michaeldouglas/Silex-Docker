@@ -74,3 +74,11 @@ Para remover todos as imagens você pode executar em seu terminal o comando:
 ```
 docker rmi $(docker images -q)
 ```
+
+## Remover Imagens
+
+Para realizar a parada do ambiente, você deve executar em seu terminal o comando:
+
+```
+docker stop silexdocker_web_1 silexdocker_redis_1
+```

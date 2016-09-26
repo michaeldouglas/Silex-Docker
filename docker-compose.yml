@@ -5,17 +5,10 @@ services:
     ports:
       - "8000:80"
     depends_on:
-      - db
       - redis
     links:
-      - db
       - redis
     volumes:
       - ./:/var/www/html/php/Silex
   redis:
     image: redis
-  db:
-    image: mariadb
-    environment:
-      MYSQL_ROOT_PASSWORD: 123456
-      MYSQL_DATABASE: silexphp
