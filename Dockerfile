@@ -14,6 +14,8 @@ RUN apt-get update \
 && curl -sS https://getcomposer.org/installer \
   | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN docker-php-ext-install mysqli
+
 # Variavel do caminho da aplicação
 ENV HOME=/var/www/html
 

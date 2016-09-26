@@ -12,7 +12,7 @@ Essa aplicação foi criada para ser utilizada no curso de Silex do PHP Conferen
 `Não` se preocupe ao executar a máquina será instalada as dependências e irá gerar o link com a máquina do Silex
 
 * Redis
-* Mariadb
+* Mysql
  
 ## Dependências PHP
 
@@ -20,7 +20,6 @@ Essa aplicação foi criada para ser utilizada no curso de Silex do PHP Conferen
 
 * PHP CodeSniffer
 * Phing
-* PHP CodeSniffer
 * php-cs-fixer
 * phpunit
  
@@ -42,6 +41,11 @@ basta utilizar o comando sem a flag:
 
 
     docker-compose up
+
+## Executar em segundo plano
+
+
+    docker-compose up -d
 
 ## Testando seu Silex App
 
@@ -81,4 +85,20 @@ Para realizar a parada do ambiente, você deve executar em seu terminal o comand
 
 ```
 docker stop silexdocker_web_1 silexdocker_redis_1
+```
+
+## Para criar uma Machine Docker
+Para realizar criar uma Machine Docker, você deve executar em seu terminal o comando:
+
+```
+docker-machine create --driver virtualbox default
+docker-machine env default
+eval "$(docker-machine env default)"
+```
+
+## SSH Machine 
+Para entrar em SSH em sua Machine Docker, você deve executar em seu terminal o comando:
+
+```
+docker-machine ssh default
 ```
