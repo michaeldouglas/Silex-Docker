@@ -12,7 +12,7 @@ function phpunit(){
         echo "${green}Alias do PHPUNIT criada com sucesso!"
         sudo sh -c "printf \"#!/bin/sh
         export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
-        docker exec -t silexdocker_web_1 phpunit "$@" \\\$@
+        docker exec -t silex-app phpunit "$@" \\\$@
         \" > /usr/local/bin/phpunit"
 
         sudo chmod +x /usr/local/bin/phpunit
@@ -21,6 +21,7 @@ function phpunit(){
 
 }
 
+# PHPUNIT
 echo -n "Você deseja instalar o PHPUNIT (s/n)?"
 read answer
 if echo "$answer" | grep -iq "^s" ;then

@@ -6,7 +6,8 @@
     "type": "library",
     "require": {
         "php": ">=7.0.0",
-        "silex/silex": "~2.0"
+        "silex/silex": "~2.0",
+        "vlucas/phpdotenv": "^2.4@dev"
     },
     "authors": [
         {
@@ -21,6 +22,11 @@
         "post-update-cmd": [
             "bash -s web/server/alias.sh"
         ]
+    },
+    "autoload": {
+        "psr-4":{
+            "Projeto\\Biblioteca\\": "src/"
+        }
     },
     "minimum-stability": "dev"
 }

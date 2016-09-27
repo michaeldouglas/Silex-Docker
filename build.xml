@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PHP Conference Brasil" default="start">
+    <target name="start" depends="composer,update,dirs,dirsPermission, env"/>
+    <target name="composer">
+        <available file="composer.phar" property="composer.exists"/>
+        <echo msg="${composer.exists}"/>
+        <if>
+            <not>
+                <isset property="composer.exists"/>
+            </not>
+            <then>
+                <php expression="file_put_contents('composer.phar',file_get_contents('https://getcomposer.org/installer'))" />
+                <exec command="php composer.phar"/>
+                <composer command="install"/>
+            </then>
+        </if>
+    </target>
+    <target name="update">
+        <echo msg="Atualizando os pacotes PHP"/>
+        <composer command="update"/>
+    </target>
+    <target name="dirs">
+        <mkdir dir="log" />
+        <chmod file="log" mode="0777" verbose="true" />
+    </target>
+
+    <target name="dirsPermission">
+        <echo msg="Aplicando permissão na pasta"/>
+        <chmod file="vendor" mode="0777" verbose="true" />
+    </target>
+    <target name="env">
+        <echo msg="Criando .env"/>
+        <exec command="cp .env.example .env" />
+    </target>
+</project>

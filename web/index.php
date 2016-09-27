@@ -1,19 +1,12 @@
 <?php
 
-require_once __DIR__.'/../vendor/autoload.php';
+$filename = __DIR__.preg_replace('#(\?.*)$#', '', $_SERVER['REQUEST_URI']);
+if (php_sapi_name() === 'cli-server' && is_file($filename)) {//Verifica se a requisição realmente é do index.php
+    return false;
+}
 
-$app = new Silex\Application();
+// Chama o script do app que contém as configurações da aplicação
+require_once __DIR__.'/../src/app.php';
 
-$app->get('/hello/{name}', function($name) use($app) {
-    return 'Hello '.$app->escape($name);
-});
-
-$app['debug'] = true;
-
-$app->get('/', function() use($app) {
-    $link = mysqli_connect("192.168.99.100", "silexphp", "silexphp", "silexphp", "3310");
-
-    var_dump($link);die;
-});
-
+$app->mount('/', new projeto\biblioteca\Controllers\frontController);
 $app->run();
