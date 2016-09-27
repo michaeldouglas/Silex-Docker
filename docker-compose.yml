@@ -1,7 +1,8 @@
 version: '2'
 services:
-  web:
+  app:
     build: .
+    container_name: silex-app
     ports:
       - "8000:80"
       - "443:443"
@@ -15,8 +16,10 @@ services:
       - ./:/var/www/html/php/Silex
   redis:
     image: redis
+    container_name: silex-redis
   db:
     image: mysql:5.7
+    container_name: silex-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=silexphp
       - MYSQL_DATABASE=silexphp

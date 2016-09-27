@@ -8,8 +8,12 @@ $app->get('/hello/{name}', function($name) use($app) {
     return 'Hello '.$app->escape($name);
 });
 
+$app['debug'] = true;
+
 $app->get('/', function() use($app) {
-    return 'Silex php !';
+    $link = mysqli_connect("192.168.99.100", "root", "silexphp", "silexphp", "33060");
+
+    var_dump($link);die;
 });
 
 $app->run();
