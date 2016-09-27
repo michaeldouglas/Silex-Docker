@@ -11,7 +11,7 @@ $app->get('/hello/{name}', function($name) use($app) {
 $app['debug'] = true;
 
 $app->get('/', function() use($app) {
-    $link = mysqli_connect("192.168.99.100", "root", "silexphp", "silexphp", "33060");
+    $link = mysqli_connect("192.168.99.100", "silexphp", "silexphp", "silexphp", "3310");
 
     var_dump($link);die;
 });

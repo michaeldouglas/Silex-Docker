@@ -17,9 +17,15 @@ services:
   redis:
     image: redis
     container_name: silex-redis
+
+  # MySQL (5.7)
   db:
     image: mysql:5.7
+    ports:
+      - "3310:3306"
     container_name: silex-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=silexphp
       - MYSQL_DATABASE=silexphp
+      - MYSQL_USER=silexphp
+      - MYSQL_PASSWORD=silexphp
