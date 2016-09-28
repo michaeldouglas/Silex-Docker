@@ -10,7 +10,7 @@ $directory['directoryROOT'] = dirname(__DIR__);
 
 // Registro do Twig
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/../resources',
+    'twig.path' => __DIR__.'/../resources/Views',
 ));
 
 //Exemplo de registro de log e utilização

@@ -7,7 +7,13 @@
     "require": {
         "php": ">=7.0.0",
         "silex/silex": "~2.0",
-        "vlucas/phpdotenv": "^2.4@dev"
+        "twig/twig": "^2.0@dev",
+        "vlucas/phpdotenv": "^2.4@dev",
+        "doctrine/dbal": "~2.2",
+        "doctrine/orm"  : "*",
+        "doctrine/annotations": "*",
+        "doctrine/common": "2.5.*",
+        "monolog/monolog": "^1.20"
     },
     "authors": [
         {
@@ -25,7 +31,7 @@
     },
     "autoload": {
         "psr-4":{
-            "Projeto\\Biblioteca\\": "src/"
+            "Projeto\\Biblioteca\\": "src/Projeto/Biblioteca"
         }
     },
     "minimum-stability": "dev"

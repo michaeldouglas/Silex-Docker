@@ -1,0 +1,28 @@
+{
+  "name": "phpconferencebrasil",
+  "version": "0.0.1",
+  "description": "Pacotes NPM do projeto do curso de Silex para a PHP Conference Brasil",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaeldouglas/Silex-Docker"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaeldouglas/Silex-Docker/issues"
+  },
+  "homepage": "http://michaelaraujo.net",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^1.5.4",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.8"
+  }
+}

@@ -2,3 +2,9 @@ vendor/
 .idea/
 coverage/
 composer.phar
+public/vendor/
+.env
+node_modules
+portalv5.log
+build/
+log

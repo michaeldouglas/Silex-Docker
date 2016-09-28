@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="PHP Conference Brasil" default="start">
-    <target name="start" depends="composer,update,dirs,dirsPermission, env"/>
+    <target name="start" depends="composer,dirs,node,bower, dirsPermission, env"/>
     <target name="composer">
         <available file="composer.phar" property="composer.exists"/>
         <echo msg="${composer.exists}"/>
@@ -18,6 +18,18 @@
     <target name="update">
         <echo msg="Atualizando os pacotes PHP"/>
         <composer command="update"/>
+    </target>
+    <target name="node">
+        <echo msg="Instalando o node"/>
+        <exec command="npm install" />
+    </target>
+    <target name="bower">
+        <echo msg="Instalando o bower"/>
+        <exec command="bower install --allow-root" />
+    </target>
+    <target name="gulp">
+        <echo msg="Executando a tarefa do Gulp"/>
+        <exec command="gulp portal-scritps" dir="public/src" />
     </target>
     <target name="dirs">
         <mkdir dir="log" />
