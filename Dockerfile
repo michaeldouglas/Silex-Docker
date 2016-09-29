@@ -16,10 +16,6 @@ RUN apt-get update \
 
 RUN docker-php-ext-install mysqli
 
-# Instalação do Nodejs
-RUN apt-get install -y nodejs \
-&& apt-get install -y npm
-
 # Variavel do caminho da aplicação
 ENV HOME=/var/www/html
 
