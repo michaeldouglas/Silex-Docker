@@ -2,6 +2,8 @@
 
 Essa aplicação foi criada para ser utilizada no curso de Silex do PHP Conference Brasil.
 
+Os arquivos estáticos da aplicação encontra-se no repositório: [https://github.com/michaeldouglas/silex-static](https://github.com/michaeldouglas/silex-static)
+
 ## Compatibilidade
 
 * PHP >= 7.0
