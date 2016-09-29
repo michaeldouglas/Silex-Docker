@@ -4,6 +4,8 @@ Essa aplicação foi criada para ser utilizada no curso de Silex do PHP Conferen
 
 Os arquivos estáticos de: Javascript, css e Imagens encontram-se no repositório: [https://github.com/michaeldouglas/silex-static](https://github.com/michaeldouglas/silex-static)
 
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?maxAge=2592000)](https://github.com/michaeldouglas/Silex-Docker)
+
 ## Compatibilidade
 
 * PHP >= 7.0
