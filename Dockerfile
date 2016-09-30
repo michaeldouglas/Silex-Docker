@@ -6,6 +6,7 @@ MAINTAINER Michael Araujo <michaeldouglas010790@gmail.com>
 RUN apt-get update \
 && useradd --user-group --create-home --shell /bin/false app \
 && apt-get install -y vim \
+&& apt-get install -y git \
 && a2enmod rewrite \
 && a2enmod proxy \
 && a2enmod proxy_http \
@@ -79,5 +80,7 @@ RUN mkdir $HOME/.composer && chown -R app $HOME/.composer
 
 # Utiliza o usuário app 
 USER root
+
+RUN composer update
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
