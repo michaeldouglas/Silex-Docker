@@ -22,4 +22,4 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
 require_once __DIR__ . '/../config/database.php';
 
 //Ativa o debug
-//$app['debug'] = true;
+$app['debug'] = true;

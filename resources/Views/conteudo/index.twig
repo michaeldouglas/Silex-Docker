@@ -1,5 +1,18 @@
 {% extends 'layouts/layout.twig' %}
 
 {% block content %}
-    <h1>Michael</h1>
+    <div class="container" id="hello">
+        <div class="row">
+            <h1>${msg}</h1>
+            <input class="form-control" type="text" v-model="msg">
+        </div>
+        <div class="row">
+            <h1>List Peoples</h1>
+            <ul>
+                <li v-for="people in peoples">
+                    ${people.name}
+                </li>
+            </ul>
+        </div>
+    </div>
 {% endblock %}
