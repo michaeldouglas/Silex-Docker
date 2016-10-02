@@ -67,6 +67,16 @@ phpunit
 
 ![](http://gifsec.com/wp-content/uploads/GIF/2015/06/Dance-With-Me-Cat.gif?gs=a)
 
+## Utilização do VueJs
+
+Como nossa Template Engine é o Twig e os delimitadores do VueJS são iguais ao do Twig.
+
+Foi necessário alterar os demilitadores do VueJs para outro padrão sendo assim para utilizar os dados vindos do VueJs em seu tamplete você deve utilizar os Delimitadores da seguinte maneira:
+
+```
+${SUAVARIAVEL}
+```
+
 ## Remover Containers
 
 Para remover todos os containers você pode executar em seu terminal o comando:
