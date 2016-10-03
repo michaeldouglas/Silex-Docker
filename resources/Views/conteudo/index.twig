@@ -20,7 +20,7 @@
             <ul>
                 <li v-for="element in elements" v-on:="">
                     ${ element.title }
-                    <a href="#" v-on:click="removeElement($event)">X</a>
+                    <a href="#" @click="removeElement($event)">X</a>
                 </li>
             </ul>
         </div>
