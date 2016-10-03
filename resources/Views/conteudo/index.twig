@@ -14,5 +14,23 @@
                 </li>
             </ul>
         </div>
+        <div class="row">
+            <h1>My List Elements</h1>
+            <input class="form-control" type="text" v-model="newElement" v-on:keyup.enter="addElement"/>
+            <ul>
+                <li v-for="element in elements" v-on:="">
+                    ${ element.title }
+                    <a href="#" v-on:click="removeElement($event)">X</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <h1>v-on</h1>
+            <button @click="myClick">
+                Click
+            </button>
+            <input type="text" @keyup="myKeyUp" placeholder="myKeyUp" />
+            <input type="text" @keyup.enter="myKeyUp" placeholder="myKeyUp.enter" />
+        </div>
     </div>
 {% endblock %}
